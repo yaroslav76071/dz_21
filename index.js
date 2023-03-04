@@ -9,6 +9,12 @@ const server = http.createServer((req, res) => {
   if (filePath == './') {
     filePath = './pages/index.html';
   }
+  if (filePath == './about') {
+    filePath = './pages/about.html';
+  }
+  if (filePath == './contacts') {
+    filePath = './pages/contacts.html';
+  }
 
   const extname = String(path.extname(filePath)).toLowerCase();
   let contentType = 'text/html';
