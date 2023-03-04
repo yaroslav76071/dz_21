@@ -15,7 +15,9 @@ const server = http.createServer((req, res) => {
   if (filePath == './contacts') {
     filePath = './pages/contacts.html';
   }
-
+  if (filePath == './databases') {
+    filePath = './db.json';
+  }
   const extname = String(path.extname(filePath)).toLowerCase();
   let contentType = 'text/html';
   switch (extname) {
